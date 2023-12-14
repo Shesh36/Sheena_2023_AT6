@@ -1,0 +1,18 @@
+class DataValidator:
+    def __init__(self):
+        pass
+
+    def validate_and_process(self, input_list):
+        """
+        Validates and processes a list of strings, converting them to positive integers if valid.
+
+        This method checks each string in the input list to determine if it represents a valid
+        positive integer. It adds these valid integers to a new list which is then returned.
+
+        Args:
+            input_list (list of str): A list of strings to be validated and processed.
+
+        Returns:
+            list of int: A list containing the positive integers extracted from the input list.
+        """
+        return [int(item) for item in input_list if item.isdigit() and int(item) > 0]
